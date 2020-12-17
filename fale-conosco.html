@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css" />
+        <link rel="shortcut icon" href="img/favicon.png"/>
+        <title>Gustavo - Desenvolvimento - Web</title>
+        <style>
+            .cabecalho{
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                background-image: url(img/fundo1.jpg);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 100px;
+                background-repeat: no-repeat;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+            <section class="cabecalho">
+                <header>
+                    <nav>
+                        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+                        <ul class="links">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="nossos-produtos.html">Nossos Produtos</a></li>
+                            <li><a href="fale-conosco.html">Fale Conosco</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="content">
+                    <div class="textBx">
+                        <h2>Google<br><span>Glass</span></h2>
+                        <p class="bx">"Um dispositivo mãos-livres para um trabalho prático mais inteligente e rápido."</p>
+                    </div>
+                </div>
+                <div class="custom-shape-divider-bottom-1605787823">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+            </section>
+            <section class="section_tipo">
+                <form method="POST" id="fContato">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                            <p class="form"><label for="cNome">Nome:</label>
+                                <input type="text" name="tNome" id="cNome" size="20" maxlength="30"placeholder="Nome Completo"/></p>
+        
+                            <p class="form"><label for="cSenha">Senha:</label>
+                                <input type="password" name="tSenha" id"cSenha" size="8" maxlength="8" placeholder="Digita uma senha"/></p>
+        
+                            <p class="form"><lable>E-mail:</label>
+                                <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40"/></p>
+        
+                            <fieldset id="sexo">
+                               <legend>Sexo</legend>
+                                    <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label></br>
+                                    <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+                             </fieldset>
+                            <p class="form">Data de Nascimento: <input type="date" name="tNasc" id="cNasc"/></p>
+                            
+                    </fieldset>
+        
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p class="form"><label for="cRua">Logradouro:</label>
+                            <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trava, ..."/></p>
+                        
+                        <p class="form"><label for="cNum">Número:</label>
+                            <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+        
+                        <p class="form"><label for="cEst">Estado:</label>
+                        <select>
+                            <optgroup label="Região Sudeste">
+                               <option value="RJ">Rio de Janeiro</option>
+                               <option value="SP">São Paulo</option>
+                            </optgroup>
+                            
+                            <optgroup label="Região Nordeste">
+                                <option selected value="BA">Bahia</option>
+                            </optgroup>
+                        </select> </p>
+                        <p class="form"><label for="cCid">Cidade:</label>
+                        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"/></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Niteroi"></option>
+                        </datalist>
+                    </fieldset>
+        
+                    <fieldset id="mensagem">  
+                        <legend>Mensagem do Usuário</legend>
+                        <p class="form"><label for="cUrg">Grau de Urgência:</label>
+                            Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>
+                        <p class="form"><label for="cMsg">Mensagem:</label>
+                        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                    </fieldset>
+                    
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <p class="form"><input type="checkbox" name="tPed" id="cPed" checked>
+                        <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                       
+                        <p class="form"><label for="cCor">Cor:</label>
+                        <input type="color" name="cCor" id="cCor" valeu="0000FF"/></p>
+                        
+                        <p class="form"><label for="cQtd">Quantidade:</label>
+                        <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+                        
+                        <p class="form"><label for="cTot">Preço Total:</label> R$
+                        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+                    </fieldset>
+                </form>
+                <input type="submit" class="botao" name="enviar" value="Enviar mensagem »">
+            </section>
+            <footer id="rodape" class="final">
+                <div class="coluna9">
+                    <h4 class="titulo-pe">Google Glass</h4>
+                    <p class="texto-pe">
+                        Um dispositivo mãos-livres para um trabalho prático mais inteligente e rápido.
+                    </p>
+                </div>
+            </footer>
+    </body>
+</html>
